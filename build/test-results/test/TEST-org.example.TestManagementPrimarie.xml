@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.TestManagementPrimarie" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-09T18:05:32" hostname="192-168-0-101.rdsnet.ro" time="0.028">
+  <properties/>
+  <testcase name="adaugaCerere1()" classname="org.example.TestManagementPrimarie" time="0.028"/>
+  <system-out><![CDATA[true
+true
+true
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
