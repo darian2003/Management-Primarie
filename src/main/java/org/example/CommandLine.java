@@ -48,7 +48,6 @@ public class CommandLine {
                 utilizatorNou.setBirouUtilizator(database.birouEntitatiJuridice);
                 break;
             default:
-                System.out.println("Tip de utilizator invalid");
                 return;
         }
 
@@ -61,7 +60,6 @@ public class CommandLine {
         Utilizator utilizator = Utilizator.gasesteUtilizatorDupaNume(numeUtilizator, database);
 
         if (utilizator == null) {
-            System.out.println("Utilizator inexistent!");
             return;
         }
 
@@ -202,7 +200,6 @@ public class CommandLine {
             outputStream = new FileOutputStream(outputAntet + "functionar_" + numeFunctionar + ".txt", true);
             pw = new PrintWriter(outputStream);
         } catch (FileNotFoundException e) {
-            System.out.println("Runtime exception: file not found!");
             return;
         }
 

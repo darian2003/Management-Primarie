@@ -92,7 +92,6 @@ class ComparaCereriFunctieData implements Comparator<Cerere> {
             date1 = formatareData1.parse(cerere1.getData());
             date2 = formatareData2.parse(cerere2.getData());
         } catch (ParseException e) {
-            System.out.println("Eroare formatare data");
             return 0;
         }
 

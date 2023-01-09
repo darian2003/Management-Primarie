@@ -68,7 +68,6 @@ public class Cerere {
         }
 
         if (tipCerere == TipCerere.INVALID) {
-            System.out.println("Cererea \"" + cerere + " \" nu este valida!");
             return false;
         }
 

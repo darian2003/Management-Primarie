@@ -71,9 +71,9 @@ public class ManagementPrimarie {
                 line = br.readLine();
             }
         } catch (IOException e) {
-            System.out.println("IO Error");
+
         } catch (CerereNepermisaExceptie e) {
-            System.out.println("Eroare cerere");
+
         }
 
         pw.close();
