@@ -119,7 +119,8 @@ public class Cerere {
             persoana.printCerereUtilizator(pw, this);
             return;
         }
-        if (this.utilizator instanceof Pensionar pensionar) {
+        if (this.utilizator instanceof Pensionar) {
+            Pensionar pensionar = (Pensionar) utilizator;
             pensionar.printCerereUtilizator(pw, this);
         }
 
