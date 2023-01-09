@@ -80,6 +80,9 @@ public class CommandLine {
             ret = false;
         }
 
+        /* adaugam cererea atat in lista de cereri in asteptare ale utilizatorului respectiv
+        cat si in coada de prioritate a birouli
+         */
         if (ret) {
             utilizator.cereriInAsteptare.add(cerere);
             database.adaugaCerereInBirou(cerere);
@@ -113,7 +116,7 @@ public class CommandLine {
 
         Utilizator utilizator = Utilizator.gasesteUtilizatorDupaNume(numeUtilizator, database);
 
-        // sorteaza ArrayList-ul de utilizatori in functie de data
+        // sorteaza ArrayList-ul de utilizatori in functie de data pentru a respecta criteriul de afisare
         utilizator.cereriInAsteptare.sort(new ComparaCereriFunctieData());
 
         for (Cerere cerere : utilizator.cereriInAsteptare)
@@ -144,7 +147,6 @@ public class CommandLine {
                 database.birouPersoane.afiseazaCoadaCereriBirou(printWriter);
                 break;
             default:
-                return;
         }
     }
 
@@ -166,6 +168,8 @@ public class CommandLine {
         String numeFunctionar = strTok[2];
 
         FunctionarPublic functionarPublic = new FunctionarPublic(numeFunctionar);
+
+        // adauga functionarul in lista biroului corespunzator
         switch (tipUtilizator) {
             case ELEV:
                 database.birouElevi.functionari.add(functionarPublic);
@@ -192,10 +196,15 @@ public class CommandLine {
         Birou birou = Birou.gasesteBirou(tipBirou, database);
         String numeFunctionar = strTok[2];
 
+        /* scrie detaliile cererii in fisierul functionarului
+        deoarece utilizez "PrintWriter" pentru output => daca fisierul este inexistent la
+        momentul instantierii "pw", acesta va fi creat
+         */
         String outputAntet = "src/main/resources/output/";
         FileOutputStream outputStream = null;
         PrintWriter pw = null;
 
+        // append = true !
         try {
             outputStream = new FileOutputStream(outputAntet + "functionar_" + numeFunctionar + ".txt", true);
             pw = new PrintWriter(outputStream);
@@ -203,6 +212,9 @@ public class CommandLine {
             return;
         }
 
+        /* elimin cererea prima cerere din birou si din lista de cereri de asteptare,
+        o adaug in lista de finalizate si scriu in fisierul functionarului detaliile sale
+         */
         Cerere cerere = birou.cereriBirou.poll();
         cerere.getUtilizator().cereriInAsteptare.remove(cerere);
         cerere.getUtilizator().cereriFinalizate.add(cerere);

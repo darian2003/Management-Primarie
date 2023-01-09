@@ -75,6 +75,7 @@ public class Cerere {
 
     }
 
+    // usureaza afisarile
     public String convertTypeToString() {
         switch (this.tipCerere) {
             case INLOCUIRE_BULETIN:
@@ -126,6 +127,10 @@ public class Cerere {
 
     }
 
+    /* verifica daca cererea este valida. Caz negativ => arunca exceptie si printeaza textul
+    cu motivul pentru care cererea nu poate fi inaintata.
+    Exceptia este prrinsa si tratata in interiorul metodei cerereNoua din CommandLine
+     */
     public boolean verificaTipCerere() throws CerereNepermisaExceptie {
 
         final String UTILIZATOR_INVALID = "Utilizatorul nu poate inainta aceasta cerere";
