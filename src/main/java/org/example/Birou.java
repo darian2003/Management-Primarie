@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-public class Birou {
+public class Birou<E extends Utilizator> {
 
     protected PriorityQueue<Cerere> cereriBirou = new PriorityQueue<>(50, new ComparatorCerere());
     protected ArrayList<FunctionarPublic> functionari = new ArrayList<>();

@@ -62,7 +62,7 @@ public abstract class Utilizator {
 
         // cautare
         while (!this.birouUtilizator.cereriBirou.isEmpty()) {
-            Cerere tempCerere = this.birouUtilizator.cereriBirou.poll();
+            Cerere tempCerere = (Cerere) this.birouUtilizator.cereriBirou.poll();
             // verific daca am gasit cererea pe care doresc sa o sterg
             if (!(numeUtilizator.equals(tempCerere.getUtilizator().nume) && data.equals(tempCerere.getData()))) {
                 tempArray.add(tempCerere);

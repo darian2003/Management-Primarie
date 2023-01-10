@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.TestManagementPrimarie" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-09T18:38:52" hostname="Darians-MacBook-Pro.local" time="0.03">
+<testsuite name="org.example.TestManagementPrimarie" tests="17" skipped="0" failures="0" errors="0" timestamp="2023-01-10T12:10:51" hostname="Darians-MacBook-Pro.local" time="0.103">
   <properties/>
-  <testcase name="adaugaCerere1()" classname="org.example.TestManagementPrimarie" time="0.03"/>
+  <testcase name="utilizatoriCombinat1()" classname="org.example.TestManagementPrimarie" time="0.034"/>
+  <testcase name="utilizatoriCombinat2()" classname="org.example.TestManagementPrimarie" time="0.008"/>
+  <testcase name="utilizatoriCombinat3()" classname="org.example.TestManagementPrimarie" time="0.01"/>
+  <testcase name="exceptieCerere1()" classname="org.example.TestManagementPrimarie" time="0.002"/>
+  <testcase name="adaugaCerere1()" classname="org.example.TestManagementPrimarie" time="0.002"/>
+  <testcase name="birouCereri1()" classname="org.example.TestManagementPrimarie" time="0.005"/>
+  <testcase name="birouCereri2()" classname="org.example.TestManagementPrimarie" time="0.004"/>
+  <testcase name="birouCereri3()" classname="org.example.TestManagementPrimarie" time="0.002"/>
+  <testcase name="birouCereri4()" classname="org.example.TestManagementPrimarie" time="0.009"/>
+  <testcase name="birouCereri5()" classname="org.example.TestManagementPrimarie" time="0.004"/>
+  <testcase name="emptyOutput()" classname="org.example.TestManagementPrimarie" time="0.002"/>
+  <testcase name="stergeCerere1()" classname="org.example.TestManagementPrimarie" time="0.001"/>
+  <testcase name="utilizatorCerereCombinat1()" classname="org.example.TestManagementPrimarie" time="0.002"/>
+  <testcase name="utilizatorCerereCombinat2()" classname="org.example.TestManagementPrimarie" time="0.003"/>
+  <testcase name="utilizatorCerereCombinat3()" classname="org.example.TestManagementPrimarie" time="0.003"/>
+  <testcase name="utilizatorCerereCombinat4()" classname="org.example.TestManagementPrimarie" time="0.001"/>
+  <testcase name="utilizatorCerereCombinat5()" classname="org.example.TestManagementPrimarie" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -215,7 +215,7 @@ public class CommandLine {
         /* elimin cererea prima cerere din birou si din lista de cereri de asteptare,
         o adaug in lista de finalizate si scriu in fisierul functionarului detaliile sale
          */
-        Cerere cerere = birou.cereriBirou.poll();
+        Cerere cerere = (Cerere) birou.cereriBirou.poll();
         cerere.getUtilizator().cereriInAsteptare.remove(cerere);
         cerere.getUtilizator().cereriFinalizate.add(cerere);
 

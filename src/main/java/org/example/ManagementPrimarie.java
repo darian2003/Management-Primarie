@@ -8,11 +8,11 @@ public class ManagementPrimarie {
 
     protected ArrayList<Utilizator> utilizatori = new ArrayList<>();
 
-    protected Birou birouElevi = new Birou();
-    protected Birou birouAngajati = new Birou();
-    protected Birou birouPensionari = new Birou();
-    protected Birou birouEntitatiJuridice = new Birou();
-    protected Birou birouPersoane = new Birou();
+    protected Birou<Elev> birouElevi = new Birou<>();
+    protected Birou<Angajat> birouAngajati = new Birou<>();
+    protected Birou<Pensionar> birouPensionari = new Birou<>();
+    protected Birou<EntitiateJuridica> birouEntitatiJuridice = new Birou<>();
+    protected Birou<Persoana> birouPersoane = new Birou<>();
 
 
     public static void main(String[] args) throws IOException {
